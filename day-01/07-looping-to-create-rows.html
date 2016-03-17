@@ -36,9 +36,6 @@
                         }
                     }
                 },
-                renderEntryTableRow: function(key) {
-                    return <EntryTableRow key={key} entry={this.state.entries[key]} />
-                },
                 render: function() {
                     return (
                         <section className="home">
@@ -77,6 +74,9 @@
             });
 
             var EntryTable = React.createClass({
+                renderEntryTableRow: function(key) {
+                    return <EntryTableRow key={key} entry={this.props.entries[key]} />
+                },
                 render: function() {
                     return (
                         <section className="home entries">
@@ -92,7 +92,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    {Object.keys(this.props.entries).map(this.props.renderEntryTableRow)}
+                                    {Object.keys(this.props.entries).map(this.renderEntryTableRow, this)}
                                 </tbody>
                             </table>
                         </section>

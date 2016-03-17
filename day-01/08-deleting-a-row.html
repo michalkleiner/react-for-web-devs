@@ -36,9 +36,6 @@
                         }
                     }
                 },
-                renderEntryTableRow: function(key) {
-                    return <EntryTableRow key={key} index={key} entry={this.state.entries[key]} deleteEntry={this.deleteEntry} />
-                },
                 deleteEntry: function(key) {
                     delete this.state.entries[key];
                     this.setState({entries : this.state.entries});
@@ -52,6 +49,7 @@
                                 date={this.state.date}
                                 entries={this.state.entries}
                                 renderEntryTableRow={this.renderEntryTableRow}
+                                deleteEntry={this.deleteEntry}
                             />
                         </section>
                     )
@@ -85,6 +83,9 @@
             });
 
             var EntryTable = React.createClass({
+                renderEntryTableRow: function(key) {
+                    return <EntryTableRow key={key} index={key} entry={this.props.entries[key]} deleteEntry={this.props.deleteEntry} />
+                },
                 render: function() {
                     return (
                         <section className="home entries">
@@ -100,7 +101,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    {Object.keys(this.props.entries).map(this.props.renderEntryTableRow)}
+                                    {Object.keys(this.props.entries).map(this.renderEntryTableRow, this)}
                                 </tbody>
                             </table>
                         </section>
