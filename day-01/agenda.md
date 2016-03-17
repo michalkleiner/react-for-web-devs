@@ -25,6 +25,3 @@ I've been working in the software business for 15+ years
     * Large teams
     * Good xplat testing is virtually impossible
 
-## What is React?
-
-React is, in my opinion, the premier way to build big, fast Web and native apps with JavaScript.
