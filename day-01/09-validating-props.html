@@ -120,7 +120,7 @@
                         type: React.PropTypes.string.isRequired
                     })
                 },
-                onClickDelete: function(event) {
+                handleClick: function(event) {
                     event.preventDefault();
                     this.props.deleteEntry(this.props.index);
                 },
@@ -133,7 +133,7 @@
                             <td className="calories number">{entry.calories}</td>
                             <td className="time datetime">{entry.time}</td>
                             <td className="controls">
-                                <a className="button delete-food" href="./delete" onClick={this.onClickDelete}>Delete</a>
+                                <a className="button delete-food" href="./delete" onClick={this.handleClick}>Delete</a>
                             </td>
                         </tr>
                     )
