@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta name="robots" content="noindex">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+        <title>React for Web Devs</title>
+        <link rel="stylesheet" href="./inc/styles.css" />
+        <script type='text/javascript' src="./inc/browser.js"></script>
+        <script type='text/javascript' src="./inc/react-with-addons-0.14.0.js"></script>
+        <script type='text/javascript' src="./inc/react-dom-0.14.0.js"></script>
+        <script type="application/javascript;version=1.7" language="JavaScript 1.7">//<![CDATA[
+
+            /* Define the components */
+
+            var App = React.createClass({
+                render: function() {
+                    return (
+                        <section className="home">
+                            <h1>
+                                <div className="date">Tue Jan 5</div>
+                                <div className="calories">610</div>
+                                <div className="label">calories left</div>
+                            </h1>
+                            <Controls/>
+                        </section>
+                    )
+                }
+            });
+
+            var Controls = React.createClass({
+                render: function() {
+                    return (
+                        <ul>
+                            <li><a className="button" href="./next">Next</a></li>
+                            <li><a className="button" href="./prev">Prev</a></li>
+                            <li><a className="button" href="./food">Food</a></li>
+                            <li><a className="button" href="./exercise">Exercise</a></li>
+                            <li><a className="button" href="./more">More</a></li>
+                        </ul>
+                    )
+                }
+            });
+
+            /* Let's do this... */
+
+            var wrapper = document.getElementById('wrapper');
+            ReactDOM.render(<App />, wrapper);
+
+        //]]>
+        </script>
+    </head>
+    <body>
+        <script src="./inc/jsfiddle-integration-babel.js"></script>
+        <div id="wrapper">
+            <!-- This element's contents will be replaced with your component. -->
+        </div>
+    </body>
+</html>
+
