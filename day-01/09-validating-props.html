@@ -105,7 +105,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    {Object.keys(this.props.entries).map(this.renderEntryTableRow, this)}
+                                    {Object.keys(this.props.entries).map(this.renderEntryTableRow)}
                                 </tbody>
                             </table>
                         </section>
@@ -137,9 +137,9 @@
                             <td className="calories number">{entry.calories}</td>
                             <td className="time datetime">{entry.time}</td>
                             <td className="controls">
-                                <a 
-                                    className="button delete-food" 
-                                    href="./delete" 
+                                <a
+                                    className="button delete-food"
+                                    href="./delete"
                                     onClick={this.handleClick}>Delete</a>
                             </td>
                         </tr>
