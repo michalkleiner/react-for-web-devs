@@ -1,5 +1,15 @@
-Day 1 Agenda
+Day 1: Introduction to React for Web Developers
 ====
+
+## Abstract
+
+In this first course, Jonathan will introduce you to the most important parts of React, including the thinking behind it and core concepts. You’ll explore the new virtual DOM paradigm and learn how React differs from other JS libraries and when you’d want to use it. Then Jonathan will take you through each of the steps in creating a simple web app using ReactJS. At the end of this course, you’ll have a thorough understanding of React and a solid foundation for the more advanced topics that come later in this course series.
+
+* Create your first component using React.createClass
+* Learn about the virtual DOM (the JavaScript version of the actual DOM)
+* Learn how to organize components into an application
+* Learn about JSX, React’s new language that allows you to write HTML as syntax, which is transformed to lightweight JavaScript objects
+* Get an introduction to state by rendering and re-rendering the virtual DOM
 
 ## Why me?
 
