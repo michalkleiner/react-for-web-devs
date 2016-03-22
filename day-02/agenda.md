@@ -10,19 +10,28 @@ This course extends the simple web app built in the first class into a more adva
 * See how your data flow communicates and interacts with React components
 * Learn about view navigation and other React features
 
-## Steps
+## Initial Steps
 
 1. [Install Node](https://nodejs.org/en/)
 1. Update npm `sudo npm install -g npm`
 1. Install browserify `npm install -g browserify`
-1. Install gulp globally `sudo npm install -g gulp`
-1. `cd` into project directory
-1. Run `npm install --save react react-dom babelify babel-preset-react`
-1. Split `main.js` out of `index.html`
-1. Run `browserify -t [ babelify --presets [ react ] ] main.js -o bundle.js`
-1. Run `npm install gulp --save-dev` to install gulp locally
-
-
 1. [Install React dev tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en)
 1. [Install Babel syntax definition](http://babeljs.io/)
 1. [Window Terminal](http://cmder.net/)
+
+## 02: Setup Simple Dev Environment
+
+1. `cd` into project directory
+1. Split `main.js` out of `index.html`
+1. Run `npm install --save react react-dom babelify babel-preset-react`
+1. Run `browserify -t [ babelify --presets [ react ] ] main.js -o bundle.js`
+
+## 03: Setup Advanced Dev Environment
+
+1. Add `package.json` to project directory
+1. Add `gulpfile.js` to project directory
+1. Install gulp globally `sudo npm install -g gulp`
+1. Run `npm install`
+1. Run `gulp`
+
+
