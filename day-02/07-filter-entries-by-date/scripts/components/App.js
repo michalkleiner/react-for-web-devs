@@ -22,7 +22,7 @@ var App = React.createClass({
         this.state.date = u.storeDate(date);
         this.setState({date : this.state.date});
     },
-    componentWillMount: function() {
+    componentDidMount: function() {
         this.setState({
             entries: require('../entries')
         });

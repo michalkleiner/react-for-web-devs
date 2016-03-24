@@ -23,6 +23,21 @@ let helpers = {
             }
         }
         return 2000 - calories;
+    },
+    currentDate: function() {
+        var today = new Date();
+        var dd = ('0' + today.getDate()).slice(-2);
+        var mm = ('0' + (today.getMonth() + 1)).slice(-2);
+        var yyyy = today.getFullYear();
+        var dateString = yyyy + '-'+ mm + '-'+ dd;
+        return dateString;
+    },
+    currentTime: function() {
+        var today = new Date();
+        var hh = ('0' + today.getHours()).slice(-2);
+        var mm = ('0' + today.getMinutes()).slice(-2);
+        var timeString = hh + ':'+ mm;
+        return timeString;
     }
 }
 
