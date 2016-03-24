@@ -34,7 +34,7 @@ var App = React.createClass({
     setDate: function(offset) {
         var date = new Date(this.state.date);
         date.setUTCDate(date.getUTCDate() + offset);
-        this.state.date = u.dbDate(date);
+        this.state.date = u.storeDate(date);
         this.setState({date : this.state.date});
     },
     render: function() {

@@ -6,7 +6,7 @@ let helpers = {
         var prettyDate = weekdays[d.getUTCDay()] + ' ' + months[d.getUTCMonth()] + ' ' + d.getUTCDate();
         return prettyDate;
     },
-    dbDate: function(dateObject) {
+    storeDate: function(dateObject) {
         var dd = ('0' + dateObject.getUTCDate()).slice(-2);
         var mm = ('0' + (dateObject.getUTCMonth() + 1)).slice(-2);
         var yyyy = dateObject.getUTCFullYear();
