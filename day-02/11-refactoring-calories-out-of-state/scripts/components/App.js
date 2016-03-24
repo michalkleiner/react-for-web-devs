@@ -8,8 +8,7 @@ import u from '../helpers';
 var App = React.createClass({
     getInitialState: function() {
         return {
-            calories: 2000,
-            date: '2016-03-23',
+            date: '',
             entries: {}
         }
     },
@@ -26,9 +25,7 @@ var App = React.createClass({
         var date = new Date(this.state.date);
         date.setUTCDate(date.getUTCDate() + offset);
         this.state.date = u.storeDate(date);
-        this.state.calories = u.caloriesRemaining(this.state.entries, this.state.date);
         this.setState({
-            calories: this.state.calories,
             date : this.state.date
         });
     },
@@ -40,9 +37,9 @@ var App = React.createClass({
             this.setState(JSON.parse(localStorage.kiloState));
         } else {
             var entries = require('../entries');
-            var calories = u.caloriesRemaining(entries, this.state.date);
+            var today = u.currentDate();
             this.setState({
-                calories: calories,
+                date: today,
                 entries: entries
             });
         }
@@ -52,7 +49,7 @@ var App = React.createClass({
         var currentTime = u.currentTime();
         return (
             <section className="home">
-                <Summary date={this.state.date} calories={this.state.calories} />
+                <Summary date={this.state.date} entries={this.state.entries} />
                 <Controls setDate={this.setDate} />
                 <EntryTable date={this.state.date} entries={this.state.entries} deleteEntry={this.deleteEntry} />
                 <FoodForm date={currentDate} time={currentTime} addEntry={this.addEntry} />
